@@ -333,17 +333,17 @@
                         </div>
                     </div>
                     <div class="mt-6">
-                        <div class="flex flex-col mx-4 gap-3 w-[80%]">
-                            <h4 class="rounded-lg p-1">Passenger Name*</h4>
-                            <input class="rounded-lg p-1" type="text" name="" id="" required
+                            <form action="" class="flex flex-col mx-4 gap-3 w-[80%]">
+                                <h4 class="rounded-lg p-1">Passenger Name*</h4>
+                            <input class="rounded-lg p-1" type="text" name="" id="contactName" required
                                 placeholder="Enter your Name">
                             <h4 class="rounded-lg p-1">Phone Number*</h4>
-                            <input class="rounded-lg p-1" type="tel" name="" id="" required
+                            <input class="rounded-lg p-1" type="number" name="" id="contactPhone" required
                                 placeholder="Enter your Phone">
                             <h4 class="rounded-lg p-1">Email ID*</h4>
-                            <input class="rounded-lg p-1" type="tel" name="" id="" placeholder="Enter your Email">
-                            <button class="bg-[#22c55e] p-2  rounded-2xl hover:bg-green-700">Next</button>
-                        </div>
+                            <input class="rounded-lg p-1" type="email" required name="contactEmail" id="" placeholder="Enter your Email">
+                            <input type="submit" id="submitContactForm" value="Submit" class="bg-[#22c55e] p-2  rounded-2xl hover:bg-green-700">
+                            </form>  
                         <div class="flex gap-4 m-4">
                             <p><a href="#"><u>Terms and Conditions</u></a></p>
                             <p><a href="#"><u>Cancellation Policy</u></a></p>

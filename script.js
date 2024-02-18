@@ -69,6 +69,9 @@ function applyCoupon() {
             couponMessage=("Your discount amount : "+ discountAmount);
             console.log(couponMessage);
         }
+        else{
+            couponMessage="Invalid Coupon";
+        }
     } else {
         couponMessage="Coupon applied for 4 seats. "
         console.log(couponMessage);
@@ -79,3 +82,4 @@ function applyCoupon() {
 
     document.getElementById("applyCoupon").parentElement.classList.add('hidden');
 }
+
