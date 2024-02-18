@@ -110,7 +110,7 @@
                 All Offers </button>
         </section>
     </div>
-    <div>
+    <div class="">
         <!-- P.H Paribahan -->
         <section id="targetDiv" class="bg-[#f7f8f8]  border-t-2 border-[#1dd100] rounded-t-[36px] mt-16 pt-40">
             <div> <!-- App Section -->
@@ -303,7 +303,7 @@
                         </div>
                         <hr>
                         <div id="ticketDetails" class="grid grid-cols-3 gap-3 justify-between px-4">
-                            
+
                         </div>
                         <hr>
                         <div class="grid grid-cols-3 gap-3 justify-end px-4 font-medium py-2">
@@ -317,7 +317,8 @@
                         </div>
                         <div class="bg-white flex justify-between mx-3 my-3 px-3 rounded-lg w-[77%]">
                             <input type="text" name="" id="discount" placeholder="Have any Coupon?" class="w-[80%]">
-                            <button id="applyCoupon" class="px-4 py-1 m-1 rounded-xl bg-green-500 hover:bg-green-700">Apply</button>
+                            <button id="applyCoupon"
+                                class="px-4 py-1 m-1 rounded-xl bg-green-500 hover:bg-green-700">Apply</button>
                         </div>
                         <div>
                             <h4 id="couponMessage" class="font-semibold text-sm text-slate-400 pl-4"></h4>
@@ -333,33 +334,55 @@
                         </div>
                     </div>
                     <div class="mt-6">
-                            <form action="" class="flex flex-col mx-4 gap-3 w-[80%]">
-                                <h4 class="rounded-lg p-1">Passenger Name*</h4>
+                        <form action="" class="flex flex-col mx-4 gap-3 w-[80%]">
+                            <h4 class="rounded-lg p-1">Passenger Name*</h4>
                             <input class="rounded-lg p-1" type="text" name="" id="contactName" required
                                 placeholder="Enter your Name">
                             <h4 class="rounded-lg p-1">Phone Number*</h4>
                             <input class="rounded-lg p-1" type="number" name="" id="contactPhone" required
                                 placeholder="Enter your Phone">
                             <h4 class="rounded-lg p-1">Email ID*</h4>
-                            <input class="rounded-lg p-1" type="email" required name="contactEmail" id="" placeholder="Enter your Email">
-                            <input type="submit" id="submitContactForm" value="Submit" class="bg-[#22c55e] p-2  rounded-2xl hover:bg-green-700">
-                            </form>  
+                            <input class="rounded-lg p-1" type="email" required name="contactEmail" id=""
+                                placeholder="Enter your Email">
+                            <input type="submit" id="submitContactForm" value="Submit"
+                                class="bg-[#22c55e] p-2  rounded-2xl hover:bg-green-700">
+                        </form>
                         <div class="flex gap-4 m-4">
                             <p><a href="#"><u>Terms and Conditions</u></a></p>
                             <p><a href="#"><u>Cancellation Policy</u></a></p>
                         </div>
                     </div>
                 </div>
-
-
             </div>
-            <div></div>
-            <div></div>
         </section>
-
-
-
     </div>
+    <footer class="text-white bg-black">
+        <div class="flex justify-between gap-5 pb-7 pt-7 lg:pt-28  mx-auto px-10 md:px-[80px] lg:px-[120px]">
+            <div>
+                <h2 class="text-4xl font-extrabold">e_Ticket</h2>
+                <p class="text-xl font-semibold pt-4">e_Ticket is a digital platform to make your daily commuting
+                    better.</p>
+            </div>
+            <div>
+                <p class="text-xl font-semibold pb-4">Download our app</p>
+                <img src="images/playstore.png" alt="" class="w-40">
+            </div>
+        </div>
+        <hr class="w-[90%] border-[0.5px] border-dashed  mx-auto">
+        <div class="px-10 md:px-[80px] lg:px-[120px] flex justify-between py-7">
+            <div >
+                <p>@all rights reserved, P-Ticket services limited.2024</p>
+            </div>
+            <div class=" flex justify-between gap-16">
+                <p><a href="#">Terms & condition</a></p>
+                <p><a href="#">Return & refund policy</a></p>
+                <p><a href="#">Privacy policy</a></p>
+            </div>
+        </div>
+
+    </footer>
+
+
     <script src="script.js"></script>
 </body>
 
