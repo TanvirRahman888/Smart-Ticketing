@@ -53,25 +53,25 @@ for (const seat of allSeat) {
 const getCoupon = document.getElementById('applyCoupon');
 getCoupon.addEventListener('click', applyCoupon);
 let couponMessage = '';
-let discountAmount=0;
+let discountAmount = 0;
 function applyCoupon() {
     const couponCode = document.getElementById('discount').value;
     if (seatCount === 4) {
         if (couponCode === "NEW15") {
             coupon = 0.15;
-            discountAmount=totalPrice * 0.15;
-            couponMessage=("Your discount amount : "+ discountAmount);
+            discountAmount = totalPrice * 0.15;
+            couponMessage = ("Your discount amount : " + discountAmount);
         } else if (couponCode === "Couple 20" || couponCode === "Couple20") {
             coupon = 0.2;
-            discountAmount=totalPrice * 0.2;
-            couponMessage=("Your discount amount : "+ discountAmount);
+            discountAmount = totalPrice * 0.2;
+            couponMessage = ("Your discount amount : " + discountAmount);
         }
-        else{
-            couponMessage="Invalid Coupon";
+        else {
+            couponMessage = "Invalid Coupon";
         }
     } else {
-        couponMessage="Coupon applied for 4 seats. "
-        
+        couponMessage = "Coupon applied for 4 seats. "
+
     }
     grandPrice = totalPrice - totalPrice * coupon;
     document.getElementById('grandPrice').innerText = grandPrice;
@@ -79,4 +79,30 @@ function applyCoupon() {
 
     document.getElementById("applyCoupon").parentElement.classList.add('hidden');
 }
+
+
+// submit Contact Form
+
+function hideContent(ID) {
+    document.getElementById(ID).classList.add("hidden");
+}
+
+function showContent(ID) {
+    document.getElementById(ID).classList.remove("hidden");
+}
+
+
+const contactPage = document.getElementById('submitContactForm');
+contactPage.addEventListener('click', function () {
+
+    const contact_Name = document.getElementById('contactName').value;
+    const contact_Phone = document.getElementById('contactPhone').value;
+    const contact_Email = document.getElementById('contactEmail').value;
+    if (contact_Name !== '' && contact_Phone !==  0 && contact_Email !== '') {
+        hideContent('homePage');
+        showContent('confirmationPage');
+    }
+})
+
+
 
