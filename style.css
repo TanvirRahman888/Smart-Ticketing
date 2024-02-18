@@ -2,3 +2,7 @@
 .body{
     font-family: Raleway;
 }
+@media only screen and (max-width: 600px) {
+    .hide-element {
+      display: none;
+    }}
