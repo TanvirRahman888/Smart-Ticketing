@@ -47,7 +47,6 @@ for (const seat of allSeat) {
         ticketDetails.append(ticketSeatNum);
         ticketDetails.append(ticketDestination);
         ticketDetails.append(ticketCost);
-        // console.log(seat, document.getElementById('ticketDetails').childNodes);
 
     })
 }
@@ -62,19 +61,17 @@ function applyCoupon() {
             coupon = 0.15;
             discountAmount=totalPrice * 0.15;
             couponMessage=("Your discount amount : "+ discountAmount);
-            console.log(couponMessage);
         } else if (couponCode === "Couple 20" || couponCode === "Couple20") {
             coupon = 0.2;
             discountAmount=totalPrice * 0.2;
             couponMessage=("Your discount amount : "+ discountAmount);
-            console.log(couponMessage);
         }
         else{
             couponMessage="Invalid Coupon";
         }
     } else {
         couponMessage="Coupon applied for 4 seats. "
-        console.log(couponMessage);
+        
     }
     grandPrice = totalPrice - totalPrice * coupon;
     document.getElementById('grandPrice').innerText = grandPrice;
