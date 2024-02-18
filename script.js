@@ -36,12 +36,12 @@ for (const seat of allSeat) {
 
         const classLists = seat.classList;
         classLists.add("bg-[#1dd100]")
-        
+
         const ticketDetails = document.getElementById('ticketDetails');
         const ticketSeatNum = document.createElement('h3');
         ticketSeatNum.innerText = seat.innerText;
         const ticketDestination = document.createElement('h3');
-        ticketDestination.innerText = 'Pabna';
+        ticketDestination.innerText = 'Economy';
         const ticketCost = document.createElement('h3');
         ticketCost.innerText = '550';
         ticketDetails.append(ticketSeatNum);
@@ -52,15 +52,30 @@ for (const seat of allSeat) {
     })
 }
 const getCoupon = document.getElementById('applyCoupon');
-getCoupon.addEventListener('click', applyCoupon); 
-
+getCoupon.addEventListener('click', applyCoupon);
+let couponMessage = '';
+let discountAmount=0;
 function applyCoupon() {
     const couponCode = document.getElementById('discount').value;
-    if (couponCode === "NEW15") {
-        coupon = 0.15;
-    } else if (couponCode === "Couple 20" || couponCode === "Couple20") {
-        coupon = 0.2;
+    if (seatCount === 4) {
+        if (couponCode === "NEW15") {
+            coupon = 0.15;
+            discountAmount=totalPrice * 0.15;
+            couponMessage=("Your discount amount : "+ discountAmount);
+            console.log(couponMessage);
+        } else if (couponCode === "Couple 20" || couponCode === "Couple20") {
+            coupon = 0.2;
+            discountAmount=totalPrice * 0.2;
+            couponMessage=("Your discount amount : "+ discountAmount);
+            console.log(couponMessage);
+        }
+    } else {
+        couponMessage="Coupon applied for 4 seats. "
+        console.log(couponMessage);
     }
     grandPrice = totalPrice - totalPrice * coupon;
     document.getElementById('grandPrice').innerText = grandPrice;
+    document.getElementById('couponMessage').innerText = couponMessage;
+
+    document.getElementById("applyCoupon").parentElement.classList.add('hidden');
 }
