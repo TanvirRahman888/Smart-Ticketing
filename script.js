@@ -98,7 +98,7 @@ contactPage.addEventListener('click', function () {
     const contact_Name = document.getElementById('contactName').value;
     const contact_Phone = document.getElementById('contactPhone').value;
     const contact_Email = document.getElementById('contactEmail').value;
-    if (contact_Name !== '' && contact_Phone !==  0 && contact_Email !== '') {
+    if (seatCount > 0 && contact_Name !== '' && contact_Phone !==  0 && contact_Email !== '') {
         hideContent('homePage');
         showContent('confirmationPage');
     }
