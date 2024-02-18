@@ -2,7 +2,8 @@
 .body{
     font-family: Raleway;
 }
-@media only screen and (max-width: 600px) {
-    .hide-element {
+@media only screen and (max-width: 1023px) {
+    .element-to-hide {
       display: none;
-    }}
+    }
+  }
