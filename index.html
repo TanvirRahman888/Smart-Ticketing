@@ -306,25 +306,26 @@
                             
                         </div>
                         <hr>
-                        <div class="grid grid-cols-3 gap-3 justify-between px-4 font-medium py-2">
+                        <div class="grid grid-cols-3 gap-3 justify-end px-4 font-medium py-2">
                             <div>
                                 <h4>Total Price</h4>
                             </div>
                             <div></div>
                             <div>
-                                <h4>BDT <span>0</span></h4>
+                                <h4>BDT <span id="totalPrice">0</span></h4>
                             </div>
                         </div>
-                        <div class="bg-white flex justify-between mx-3 my-3 px-3 rounded-lg">
-                            <input type="text" name="" id="" placeholder="Have any copupon?" class="w-[80%]">
-                            <button class="px-4 py-1 m-1 rounded-xl bg-green-500 hover:bg-green-700">Apply</button>
+                        <div class="bg-white flex justify-between mx-3 my-3 px-3 rounded-lg w-[77%]">
+                            <input type="text" name="" id="discount" placeholder="Have any Coupon?" class="w-[80%]">
+                            <button id="applyCoupon" class="px-4 py-1 m-1 rounded-xl bg-green-500 hover:bg-green-700">Apply</button>
                         </div>
-                        <div class="flex justify-between px-4 font-medium py-2">
+                        <div class="grid grid-cols-3 justify-end px-4 font-medium gap-3 py-2">
                             <div>
                                 <h4>Grand Price</h4>
                             </div>
+                            <div></div>
                             <div>
-                                <h4>BDT <span>0</span></h4>
+                                <h4>BDT <span id="grandPrice">0</span></h4>
                             </div>
                         </div>
                     </div>
