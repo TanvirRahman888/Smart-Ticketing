@@ -106,16 +106,16 @@ contactPage.addEventListener('click', function () {
         hideContent('homePage');
         showContent('confirmationPage');
     }
-    else if(seatCount < 1){
+    else if (seatCount < 1) {
         alert("Must Select Minimum 1 Seat")
     }
-    else if(contact_Name === ''){
+    else if (contact_Name === '') {
         alert("Please Write your Name!")
     }
-    else if(contact_Phone == 0){
+    else if (contact_Phone == 0) {
         alert("Please Write your Contact Number!")
     }
-    else if(contact_Email === ''){
+    else if (contact_Email === '') {
         alert("Please Write your Contact Email!")
     }
 })
