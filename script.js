@@ -1,11 +1,11 @@
-// Mouse Scroll
-document.addEventListener("DOMContentLoaded", function () {
-    let scrollButton = document.getElementById("scrollButton");
-    let targetDiv = document.getElementById("targetDiv");
-    scrollButton.addEventListener("click", function () {
-        targetDiv.scrollIntoView({ behavior: 'smooth' });
-    });
-});
+// // Mouse Scroll
+// document.addEventListener("DOMContentLoaded", function () {
+//     let scrollButton = document.getElementById("scrollButton");
+//     let targetDiv = document.getElementById("targetDiv");
+//     scrollButton.addEventListener("click", function () {
+//         targetDiv.scrollIntoView({ behavior: 'smooth' });
+//     });
+// });
 // variables
 let seatCount = 0;
 let availableSeat = 40;
