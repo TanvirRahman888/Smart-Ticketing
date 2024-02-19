@@ -96,19 +96,30 @@ function showContent(ID) {
     document.getElementById(ID).classList.remove("hidden");
 }
 
-
 const contactPage = document.getElementById('submitContactForm');
 contactPage.addEventListener('click', function () {
 
     const contact_Name = document.getElementById('contactName').value;
     const contact_Phone = document.getElementById('contactPhone').value;
     const contact_Email = document.getElementById('contactEmail').value;
-    if (seatCount > 0 && contact_Name !== '' && contact_Phone !==  0 && contact_Email !== '') {
+    if (seatCount > 0 && contact_Name !== '' && contact_Phone !== 0 && contact_Email !== '') {
         hideContent('homePage');
         showContent('confirmationPage');
-        
+    }
+    else if(seatCount < 1){
+        alert("Must Select Minimum 1 Seat")
+    }
+    else if(contact_Name === ''){
+        alert("Please Write your Name!")
+    }
+    else if(contact_Phone == 0){
+        alert("Please Write your Contact Number!")
+    }
+    else if(contact_Email === ''){
+        alert("Please Write your Contact Email!")
     }
 })
+
 
 
 
