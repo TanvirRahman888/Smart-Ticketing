@@ -25,6 +25,7 @@ for (const seat of allSeat) {
             alert("You can't select more than 4 seat.")
             return;
         }
+        seat.ad
         seatCount++;
         availableSeat--;
         totalPrice = totalPrice + 550;
@@ -34,8 +35,12 @@ for (const seat of allSeat) {
         document.getElementById('totalPrice').innerText = totalPrice;
         document.getElementById('grandPrice').innerText = grandPrice;
 
+
         const classLists = seat.classList;
-        classLists.add("bg-[#1dd100]")
+        classLists.add("bg-[#1dd100]");
+
+        seat.setAttribute('disabled', 'disabled');
+
 
         const ticketDetails = document.getElementById('ticketDetails');
         const ticketSeatNum = document.createElement('h3');
@@ -101,6 +106,7 @@ contactPage.addEventListener('click', function () {
     if (seatCount > 0 && contact_Name !== '' && contact_Phone !==  0 && contact_Email !== '') {
         hideContent('homePage');
         showContent('confirmationPage');
+        
     }
 })
 
